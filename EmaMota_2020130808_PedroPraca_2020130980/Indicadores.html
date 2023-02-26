@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="CCS_trabalho.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <!--Header -->
+        <div class="topnav" id="myTopnav">
+
+            <!-- Logo -->
+            <div class="logo_header">
+                <a href="Inicio.html"><img src="logo.png"></a>
+            </div>
+        
+            <!-- Inicio -->
+            <a href="Inicio.html" class="active">Inicio</a>
+            
+            <!-- Quem Somos-->
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="Quem_Somos.html">Quem Somos <i class="fa fa-caret-down"></i></a> 
+                </button>
+                <div class="dropdown-content">
+                    <a href="Quem_Somos.html#missao">Missão</a>
+                    <a href="Quem_Somos.html#celasaude">USF Cela Saude</a>
+                    <a href="Quem_Somos.html#equipa">Equipa</a>
+                    <a href="Quem_Somos.html#contactos">Localização & Contactos</a>
+                </div>
+            </div>
+        
+            <!-- O que fazemos -->
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="O_Que_Fazemos.html">O que fazemos <i class="fa fa-caret-down"></i></a> 
+                </button>
+                <div class="dropdown-content">
+                    <a href="O_Que_Fazemos.html#cima">Serviços</a>
+                    <a href="O_Que_Fazemos.html#baixo">Direitos & Deveres</a>
+                    <a href="O_Que_Fazemos.html#baixo">Compromissos</a>
+                </div>
+            </div>
+        
+            <!-- Indicadores -->
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="Indicadores.html">Indicadores <i class="fa fa-caret-down"></i></a> 
+                </button>
+                <div class="dropdown-content">
+                    <a href="Indicadores.html#Indicadores_grafico1">Nº de Utentes por Centro em 2019</a>
+                    <a href="Indicadores.html#Indicadores_grafico2">Caracterização dos Utentes</a>
+                    <a href="Indicadores.html#Indicadores_grafico3">Média de Consultas por Ano</a>
+                    <a href="Indicadores.html#Indicadores_grafico4">Percentagens de Utentes Satisfeitos pelos Serviços Prestados</a>
+                    <a href="Indicadores.html#Indicadores_grafico5">Consultas por Especialidade Médica</a>
+                </div>
+            </div>
+        
+            <!-- Recursos -->
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="recursos.html">Recursos <i class="fa fa-caret-down"></i></a> 
+                </button>
+                <div class="dropdown-content">
+                    <a href="Recursos_Comunidade.html">Lista de Instituições</a>
+                    <a href="Pdfs/PDF_Recursos_projetos.pdf " target="_blank">Projeto da Unidade</a>
+                    <a href="recursos.html#folhetos">Folhetos Informativos</a>
+                </div>
+            </div>
+        
+            <!-- Mais Apoio -->
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="Mais_Apoio.html">Mais Apoio <i class="fa fa-caret-down"></i></a> 
+                </button>
+                <div class="dropdown-content">
+                    <a href="Mais_Apoio.html#Maisapoio_ancora1">Referências a Unidades Hospitalares Externas</a>
+                    <a href="Mais_Apoio.html#Maisapoio_ancora2">Referências Externas Ligadas à USF</a>
+                    <a href="Mais_Apoio.html#Maisapoio_ancora3">Perguntas Frequêntes</a>
+                </div>
+            </div>
+        
+            <!-- Covid 19 -->
+            <a href="Covid-19.html">Covid-19</a>
+        
+            <!-- Noticias e Eventos -->
+            <a href="Noticias e Eventos.html">Noticias e Eventos</a>
+        
+            <!-- Login/Register -->
+            <div class="btn_loginRegisto">
+                <a href="login_register.html">Login/Registo</a>
+            </div>
+        </div>
+        <!--Indicadores-->
+    
+    <div id="título_indicadores">
+        <h2>Indicadores</h2>
+    </div>
+    <div style="background-image: url('Imagens/site-background.jpg');">
+    <div class=margin_primeirograf>
+
+    <!--Nº de utentes por Centro-->
+    <div id="Indicadores_grafico1"></div>
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+            var data = google.visualization.arrayToDataTable([
+                ['Centros', 'Utentes em 2019',],
+                ['Lisboa', 3069],
+                ['Porto', 2159],
+                ['Coimbra', 1544],
+                ['Aveiro', 1002],
+                ['Figueira da Foz', 875]
+            ]);
+
+            var options = {
+                title: 'Nº de Utentes por Centro em 2019',
+                chartArea: {width: '50%'},
+                hAxis: {
+                title: 'Nº de Utentes',
+                minValue: 0
+                },
+                vAxis: {
+                title: 'Centros'
+                }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('chart_1'));
+
+            chart.draw(data, options);
+            }
+    </script>
+    </div>
+    <div id="chart_1"></div>
+
+    <br><br>
+    
+    <!--Caracterização dos Utentes(Sexo e idade)-->
+    <div id="Indicadores_grafico2"></div>
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawVisualization);
+
+        function drawVisualization() {
+            var data = google.visualization.arrayToDataTable([
+            ['Idades', 'Feminino', 'Masculino'],
+            ['0-18',   251,     231,],
+            ['19-25',  105,      51,],
+            ['26-40',  117,      46,],
+            ['41-70',  299,     218,],
+            ['>70',    148,     129,]
+            ]);
+
+            var options = {
+            title : 'Caracterização dos Utentes',
+            vAxis: {title: 'Nº Utentes'},
+            hAxis: {title: 'Idades'},
+            seriesType: 'bars',
+            series: {5: {type: 'line'}}
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('chart_2'));
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="chart_2" style="width: 900px; height: 500px;"></div>
+
+    <br><br>
+
+    <!--Média de Consultas por Utente-->
+    <div id="Indicadores_grafico3"></div>
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'line']});
+        google.charts.setOnLoadCallback(drawBackgroundColor);
+
+        function drawBackgroundColor() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Utentes');
+
+            data.addRows([
+                [0, 0],   [1, 16],  [2, 25],  [3, 13],  [4, 5],  [5, 5],  [6, 36],  [7, 7],  [8, 6],  [9, 13]
+            ]);
+
+            var options = {
+                hAxis: {
+                title: 'Média das Percentagens de Utentes por Consulta'
+                },
+                vAxis: {
+                title: 'Média do Nº de Consultas por Ano'
+                },
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_3'));
+            chart.draw(data, options);
+            }
+    </script>    
+    <div id="chart_3"></div>
+
+    <br><br>
+
+    <!--Satisfação pelos Serviços Prestados-->
+    <div id="Indicadores_grafico4"></div>
+    <script>
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Satisfação pelos Serviços Prestados', 'Percentagem de Utentes Satisfeitos'],
+            ['Atendimento',                         70],
+            ['Tempo de Espera',                     60],
+            ['Acessibilidade',                      80],
+            ['Confiança',                           75],
+            ['Qualidade dos Serviços Prestados',    75],
+            ['Insatisfeitos',                       15]
+            ]);
+
+            var options = {
+            title: 'Percentagens de Utentes Satisfeitos pelos Serviços Prestados',
+            pieHole: 0.4,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="donutchart"></div>
+
+    <br><br>
+
+    <!--Consultas por Especialidade Médica-->
+    <div id="Indicadores_grafico5"></div>
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Especialidades Médicas', 'Nº Total de Consultas',],
+                ['Obstetricia', 150],
+                ['Cardiologia', 75],
+                ['Cirurgia Geral', 150],
+                ['Medicina Geral', 100],
+                ['Pedriatia', 200],
+                ['Pedopsiquiatria', 75],
+                ['Terapia da Fala', 75],
+            ]);
+
+            var options = {
+                title: 'Consultas por Especialidade Médica',
+                chartArea: {width: '60%' , height: '60%'},
+                hAxis: {
+                title: 'Nº Total de Consultas',
+                minValue: 0
+                },
+                vAxis: {
+                title: 'Especialidades Médicas'
+                }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('chart_4'));
+
+            chart.draw(data, options);
+            }
+    </script>
+    <div id="chart_4"></div>
+
+    <br><br>
+
+    <!--Percentagem de inscritos com 65 ou mais anos vacinados, à espera de serem vacinados ou que se recusam a se vacinar-->
+    <div id="Indicadores_grafico6"></div>
+    <script>
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Vacinados',                  279],
+            ['À Espera de Serem Vacinados', 51],
+            ['Recusam Vacinar-se',        17]
+            ]);
+
+            var options = {
+            title: 'Percentagem de inscritos com 65 ou mais anos com a vacina da gripe efectuada na última época vacinal',
+            is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="piechart_3d"></div>
+    </div>
+
+    <!-- Footer -->
+    <object width="100%" height="295px" data="footer.html"></object>
+    </div>
+
+</body>
+</html>

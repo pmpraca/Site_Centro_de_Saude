@@ -1,0 +1,16 @@
+O que Fazemos & Log In e Registar -> Praça
+/* Comentar o css e html antes de avançar */
+
+Covid 19 & Noticias -> Ema
+/* Comentar o css e html antes de avançar */
+
+Por fazer:
+
+-> Alterar formulario O Que Fazemos "as escolhas" 
+   e adicionar a escolha de um medico (praça)
+-> Recursos 
+-> Indicadores
+-> Slideshow
+-> Implementação de submenus
+-> (Implementar SASS)
+-> Fazer Mais Apoio

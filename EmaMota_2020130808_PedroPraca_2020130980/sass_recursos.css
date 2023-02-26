@@ -1,0 +1,38 @@
+.container {
+  margin: 4vw;
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.container p {
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 16pt;
+}
+
+.container img {
+  text-align: center;
+  width: 300px;
+  /*Altera o tamnho das Imagens de cada BOX /
+        display: block;       / centra /
+        margin-left: auto;   /   a    /
+        margin-right: auto; / imagem */
+}
+
+.box {
+  height: 450px;
+  color: black;
+  border: 2px solid black;
+  position: relative;
+  background-color: #aaa;
+}
+/*# sourceMappingURL=sass_recursos.css.map */

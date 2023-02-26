@@ -1,0 +1,22 @@
+Indicadores: (EMA)
+
+--> nº de utentes por centro
+--> caracterização dos utentes (idade,sexo)
+--> consultas por utente
+--> consultas por especialidade médica
+--> satisfação com os serviços prestados
+--> Percentagem de inscritos com 65 ou mais anos com a vacina da gripe
+efectuada na última época vacinal
+
+Recursos: (PRAÇA)
+
+--> Deve ser disponibilizada, de uma forma criativa e apelativa,
+    um conjunto de recursos (ex.: relatórios, projeções de evolução
+    futura/tendências, …) importantes para a atividade da USF.
+
+Mais Apoio: (EMA)
+
+--> Disponibilização de Linhas de emergência, Linhas de Apoio Nacionais, 
+    Ligações Úteis (ex.: DGS, SNS, …), Contactos de outras unidades relacionadas
+    com a saúde existentes do concelho (ex.: Hospitais, Farmácias, USF,…), 
+    Perguntas Frequentes, entre outras subseções que se considerem relevantes.

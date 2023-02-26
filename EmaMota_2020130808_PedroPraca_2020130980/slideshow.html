@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+    <link href="CCS_trabalho.css" rel="stylesheet">
+    <style>
+    * {box-sizing: border-box}
+        body 
+        {
+            font-family: Verdana, sans-serif; 
+            margin:0;
+        }
+        img 
+        {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-image: url('site-background.jpg');">
+<div class="slideshow-container">
+    <div class="mySlides">
+        <div class="conta_imgs">1 / 4</div>
+            <img src="Imgs_Recursos/img1.jpg" style="width:100%">
+        <div class="text"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="conta_imgs">2 / 4</div>
+            <img src="Imgs_Recursos/img2.png" style="width:100%">
+        <div class="text"></div>
+    </div>
+
+    <div class="mySlides">
+        <div class="conta_imgs">3 / 4</div>
+            <img src="Imgs_Recursos/img3.jpg" style="width:100%">
+        <div class="text"></div>
+    </div>
+    
+    <div class="mySlides">
+        <div class="conta_imgs">4 / 4</div>
+            <img src="Imgs_Recursos/img4.jpg" style="width:100%">
+        <div class="text"></div>
+    </div>
+
+    <a class="anterior" onclick="plusSlides(-1)">&#10094;</a> <!-- códigos char < e > -->
+    <a class="seguinte" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br> <!-- Mete um espaço entre o as imgs do slide show e os tres pontos -->
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+
+<script src="slideshow.js"></script>  
+<script>
+    var slideIndex = 1;
+    //Mostra slideshow
+    showSlides(slideIndex);
+
+    //inicia transição automática
+    //setInterval( plusSlides(1) , 2000);  Não funciona
+    setInterval( function(){ plusSlides(1); } , 2000);
+</script>
+
+</div>    
+</body>
+</html>
